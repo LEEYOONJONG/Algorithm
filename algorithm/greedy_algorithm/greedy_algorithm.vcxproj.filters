@@ -30,5 +30,11 @@
     <ClCompile Include="거스름돈.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="조세푸스.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="짝이맞지않는괄호.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
