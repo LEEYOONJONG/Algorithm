@@ -15,19 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\greedy_algorithm\짝이맞지않는괄호.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\greedy_algorithm\조세푸스.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\greedy_algorithm\오큰수.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="요세푸스 문제.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="AC.cpp">
+    <ClCompile Include="..\LinearDS, Queue, Stack, Deque\요세푸스 문제 3.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
