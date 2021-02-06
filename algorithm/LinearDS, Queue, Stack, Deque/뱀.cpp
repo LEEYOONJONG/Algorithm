@@ -96,7 +96,7 @@ int main() {
 				break;
 			}
 		}
-		if (!isApple) snake.pop_front(); //애플 없으면 꼬리 줄이기
+		if (!isApple) snake.pop_front(); // 애플 없으면 꼬리 줄이기
 		
 		if (time == direction[directCount].first) { //time이 방향전환시각에 도달한다면
 			if (direction[directCount].second == 'L') directNum = (directNum + 3) % 4;

@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinearDS, Queue, Stack, Deq
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "baekjoon", "baekjoon\baekjoon.vcxproj", "{2DBA2F6A-9417-4CCD-B00C-0CDE7CC4E7CD}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tree", "Tree\Tree.vcxproj", "{D888130A-65BE-4A20-BAC2-E9BEA9A8E974}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{2DBA2F6A-9417-4CCD-B00C-0CDE7CC4E7CD}.Release|x64.Build.0 = Release|x64
 		{2DBA2F6A-9417-4CCD-B00C-0CDE7CC4E7CD}.Release|x86.ActiveCfg = Release|Win32
 		{2DBA2F6A-9417-4CCD-B00C-0CDE7CC4E7CD}.Release|x86.Build.0 = Release|Win32
+		{D888130A-65BE-4A20-BAC2-E9BEA9A8E974}.Debug|x64.ActiveCfg = Debug|x64
+		{D888130A-65BE-4A20-BAC2-E9BEA9A8E974}.Debug|x64.Build.0 = Debug|x64
+		{D888130A-65BE-4A20-BAC2-E9BEA9A8E974}.Debug|x86.ActiveCfg = Debug|Win32
+		{D888130A-65BE-4A20-BAC2-E9BEA9A8E974}.Debug|x86.Build.0 = Debug|Win32
+		{D888130A-65BE-4A20-BAC2-E9BEA9A8E974}.Release|x64.ActiveCfg = Release|x64
+		{D888130A-65BE-4A20-BAC2-E9BEA9A8E974}.Release|x64.Build.0 = Release|x64
+		{D888130A-65BE-4A20-BAC2-E9BEA9A8E974}.Release|x86.ActiveCfg = Release|Win32
+		{D888130A-65BE-4A20-BAC2-E9BEA9A8E974}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

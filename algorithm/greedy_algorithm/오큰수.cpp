@@ -28,8 +28,7 @@ int main() {
 
 	for (int i = 0; i < n-1; i++) {
 		if (arr[i] < arr[i+1]) {
-			result[i] = arr[i + 1]; // i자리엔 i+1의 값이..
-			
+			result[i] = arr[i + 1]; // i자리엔 i+1의 값이..			
 			// minusStack에서 top(스택 중 최솟값이 존재)부터 arr[i+1]값과 비교하여
 			// arr[i+1]보다 작으면 result에 바로 반영 후 스택에서 삭제한다.
 			int stackSize = minusStack.size();

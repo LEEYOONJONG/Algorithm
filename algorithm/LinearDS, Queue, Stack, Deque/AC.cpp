@@ -19,7 +19,6 @@ int main() {
         for (int j = 0; j < p.size(); j++) {
             if (p[j] == 'D') dCount++;
         }
-
         if (dCount > n) {
             // 형식상 while돌리기
             char chch;
@@ -30,7 +29,7 @@ int main() {
             cout << "error" << endl;
             continue;
         }
-        // case 2: D의 개수가 초과하지 않아도 입력이 0개라면 [] 입력은 형식상으로 받아야함.
+        // case 2: D의 개수가 n을 초과하지 않아도 입력이 0개라면 [] 입력은 형식상으로 받아야함.
         if (n == 0) {
             char chch;
             cin.get(chch);
@@ -41,7 +40,7 @@ int main() {
             continue;
         }
 
-        ////
+        // case 3: error 안나는 일반적인 경우
         char input;
         deque<string> d;
         string tempStr = "";
