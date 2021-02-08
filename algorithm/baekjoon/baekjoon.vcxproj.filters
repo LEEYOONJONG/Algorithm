@@ -18,5 +18,17 @@
     <ClCompile Include="..\LinearDS, Queue, Stack, Deque\요세푸스 문제 3.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="수 정렬하기3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1로만들기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="A+B-9.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="수찾기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
