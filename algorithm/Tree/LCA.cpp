@@ -53,25 +53,17 @@ void common(int a, int b) {
             if (aAnc == 1) break;
             aAnc = parent[aAnc];
             count1++;
-
         }
-
-
-
         bAnc = b;
         int count2 = 0; // b를 일단 고정후 a를 전체 탐색
         int mem2 = -1;
         isfound = false;
         while (!isfound) { // b 조상 탐색
-            aAnc = a;
-            
+            aAnc = a;       
             if (aAnc == bAnc) {
                 mem2 = aAnc;
                 isfound = true;
-
             }
-
-
             while (!isfound && aAnc != 1) { // a 조상 탐색
                 aAnc = parent[aAnc];
                 count2++;
@@ -80,11 +72,9 @@ void common(int a, int b) {
                     isfound = true;
                 }
             }
-
             if (bAnc == 1) break;
             bAnc = parent[bAnc];
             count2++;
-
         }
 
         if (mem1 == -1 || mem2 == -1) { 
