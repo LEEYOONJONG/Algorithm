@@ -148,6 +148,8 @@
     <ClCompile Include="A+B-9.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="선분교차1.cpp" />
+    <ClCompile Include="선분교차2.cpp" />
     <ClCompile Include="수 정렬하기3.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

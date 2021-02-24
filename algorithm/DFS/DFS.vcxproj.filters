@@ -30,5 +30,8 @@
     <ClCompile Include="연결 요소의 개수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="알파벳.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
