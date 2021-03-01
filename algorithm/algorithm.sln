@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PQueue", "PQueue\PQueue.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DFS", "DFS\DFS.vcxproj", "{A2337ABD-B174-46CA-890E-1493414D4E92}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DFS, BFS", "DFS, BFS\DFS, BFS.vcxproj", "{821F889B-2B2C-4779-B5A9-BC7D2483D460}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{A2337ABD-B174-46CA-890E-1493414D4E92}.Release|x64.Build.0 = Release|x64
 		{A2337ABD-B174-46CA-890E-1493414D4E92}.Release|x86.ActiveCfg = Release|Win32
 		{A2337ABD-B174-46CA-890E-1493414D4E92}.Release|x86.Build.0 = Release|Win32
+		{821F889B-2B2C-4779-B5A9-BC7D2483D460}.Debug|x64.ActiveCfg = Debug|x64
+		{821F889B-2B2C-4779-B5A9-BC7D2483D460}.Debug|x64.Build.0 = Debug|x64
+		{821F889B-2B2C-4779-B5A9-BC7D2483D460}.Debug|x86.ActiveCfg = Debug|Win32
+		{821F889B-2B2C-4779-B5A9-BC7D2483D460}.Debug|x86.Build.0 = Debug|Win32
+		{821F889B-2B2C-4779-B5A9-BC7D2483D460}.Release|x64.ActiveCfg = Release|x64
+		{821F889B-2B2C-4779-B5A9-BC7D2483D460}.Release|x64.Build.0 = Release|x64
+		{821F889B-2B2C-4779-B5A9-BC7D2483D460}.Release|x86.ActiveCfg = Release|Win32
+		{821F889B-2B2C-4779-B5A9-BC7D2483D460}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
