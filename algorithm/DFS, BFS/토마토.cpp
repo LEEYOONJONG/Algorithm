@@ -13,6 +13,7 @@ vector<vector<int>> arr;
 int adjRow[4] = { -1, 0, 1, 0 };
 int adjCol[4] = { 0, 1 , 0, -1 };
 int maximum = 0;
+int count;
 void bfsAll() {
     vector<vector<bool>> visited(n, vector<bool>(m, false));
     queue<pair<int, int>> q;

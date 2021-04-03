@@ -30,5 +30,8 @@
     <ClCompile Include="거스름돈.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="출전순서정하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

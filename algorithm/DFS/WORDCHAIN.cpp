@@ -4,62 +4,88 @@
 #include <string>
 #include <string.h>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 int n;
-string str[101];
-bool check[101];
-deque<string> deq;
-bool isfound;
-
-void dfs(int here) {
-	if (check[here]) return;
-
-	check[here] = true;
-	
-	deq.push_back(str[here]);
-	if (deq.size() == n) {
-		for (int i = 0; i < deq.size(); i++) {
-			cout << deq[i] << ' ';
-		}
-		cout << endl;
-		isfound = true;
-		return;
-	}
-
-	char lastword = str[here][str[here].size() - 1];
-	for (int i = 0; i < n; i++) {
-		if (!check[i] && lastword == str[i][0]) { // 방문 안했고, here의 마지막 글자와 같다면
-			dfs(i);
-			if (isfound) return;
+vector<string> words;
+vector<int> indegree;
+vector<int> outdegree;
+vector<string> graph[26][26];
+int adj[26][26]; //인접행렬
+void getEulerCircuit(int here, vector<int>& circuit) {
+	for (int there = 0; there < 26; there++) {
+		while (adj[here][there] > 0) {
+			adj[here][there]--;
+			getEulerCircuit(there, circuit);
 		}
 	}
-	
-	deq.pop_back();
+	circuit.push_back(here);
 }
-
-void dfsAll() {
-	
-	for (int i = 0; i < n; i++) { //출발
-		memset(check, false, sizeof(check));
-		deq.clear();
-		dfs(i);
-		if (isfound == true) break;
+vector<int> getEuler(){
+	vector<int> circuit;
+	//경로인 경우
+	for (int i = 0; i < 26; i++) {
+		if (outdegree[i] == indegree[i] + 1) {
+			getEulerCircuit(i, circuit);
+			return circuit;
+		}
 	}
-	if (isfound == false) cout << "IMPOSSIBLE"<<endl;
+	//서킷임.
+	for (int i = 0; i < 26; i++) { //굳이 필요?
+		if (outdegree[i]) {		//굳이 필요?
+			getEulerCircuit(i, circuit);
+			return circuit;
+		}
+	}
 }
-
+bool checkEuler() {
+	int plus1 = 0, minus1 = 0;
+	for (int i = 0; i < 26; i++) {
+		int delta = outdegree[i] - indegree[i];
+		if (delta < -1 || delta>1) return false;
+		if (delta == 1) plus1++;
+		if (delta == -1)minus1++;
+	}
+	return (plus1 == 1 && minus1 == 1) || (plus1 == 0 && minus1 == 0);
+}
 int main() {
-	int c;
-	cin >> c;
-	for (int i = 0; i < c; i++) {
-		
-		isfound = false;
+	// (int)'a'; // 97
+	int t;
+	cin >> t;
+	for (int i = 0; i < t; i++) {
 		cin >> n;
-		
+		words = vector<string>(); //초기화
+		indegree = vector<int>(26,0); //초기화
+		outdegree = vector<int>(26,0); //초기화
+		for (int i = 0; i < 26; i++)
+			for (int j = 0; j < 26; j++) graph[i][j].clear();
+		memset(adj, 0, sizeof(adj));
+
+
+		string input;
 		for (int j = 0; j < n; j++) {
-			cin >> str[j];
+			cin >> input;
+			words.push_back(input);
+			int front = (int)input[0] - 'a';
+			int back = (int)input[input.size() - 1] - 'a';
+			graph[front][back].push_back(input);
+			adj[front][back]++;
+			outdegree[front]++;
+			indegree[back]++;
 		}
-		dfsAll();
+		if (!checkEuler()) cout << "IMPOSSIBLE" << endl;
+		else {
+			vector<int> result = getEuler();
+			if (result.size() != words.size() + 1) cout << "IMPOSSIBLE" << endl;
+			else {
+				reverse(result.begin(), result.end());
+				for (int j = 1; j < result.size(); j++) {
+					int a = result[j - 1], b = result[j];
+					cout << graph[a][b].back() << ' ';
+					graph[a][b].pop_back();
+				}
+			}
+		}
 	}
 }
