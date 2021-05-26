@@ -15,13 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="최단경로.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="최단경로다시.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="파티.cpp">
+    <ClCompile Include="네트워크연결.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
